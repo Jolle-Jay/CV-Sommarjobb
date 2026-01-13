@@ -16,6 +16,58 @@ body {
     background-color: var(--bg-soft);
 }
 
+.PB nav {
+    display: flex;
+    /* "Arrange link in a flexible container" */
+    justify-content: center;
+    /* "Center the link horizontally" */
+    align-items: center;
+    /* "Center the link vertically" */
+    margin: 40px 0 20px;
+    /* "Space: 40px top, 0 sides, 20px bottom" */
+}
+
+.PB nav a {
+    float: none;
+    padding: 12px 30px;
+    background-color: #000000;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.PB nav a:hover {
+    background-color: #1f9294;
+}
+
+.PB article {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+.PB article:target {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .sidebar .summary,
 .card .meta {
     color: var(--text-muted);
@@ -106,7 +158,6 @@ body {
 }
 
 .sidebar p {
-    align-items: center;
     text-align: center;
 }
 
@@ -167,7 +218,7 @@ body {
     text-align: center;
 }
 
-.contact-line.github {
+.contact-line-github {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -176,12 +227,12 @@ body {
     margin: 8px;
 }
 
-.contact-line.github .label {
+.contact-line-github .label {
     text-align: left;
     flex-shrink: 0;
 }
 
-.contact-line.github .link {
+.contact-line-github .link {
     text-align: center;
     flex: 10;
 }
@@ -305,6 +356,10 @@ body {
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.PB h3 {
+    text-align: center;
 }
 
 .card h3::after {
@@ -473,6 +528,13 @@ li {
     margin-bottom: 8px;
 }
 
+.sidebar .contact-line {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+}
+
 /* Profile picture */
 .profile-pic {
     margin-top: 20px;
@@ -492,12 +554,7 @@ li {
     margin-left: 18px;
 }
 
-.mail-icon {
-    display: flex;
-    position: absolute;
-    left: 0;
-    margin-left: 18px;
-}
+.mail-icon {}
 
 .linked-icon {
     margin-top: none;
