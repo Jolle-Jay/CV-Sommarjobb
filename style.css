@@ -218,6 +218,10 @@ body {
     text-align: center;
 }
 
+.sidebar .mail {
+    text-align: center;
+}
+
 .contact-line-github {
     display: flex;
     justify-content: space-between;
@@ -554,14 +558,16 @@ li {
     margin-left: 18px;
 }
 
-.mail-icon {}
+.mail-icon {
+    position: absolute;
+    left: 0;
+    margin-left: 18px;
+}
 
 .linked-icon {
-    margin-top: none;
-    margin-bottom: none;
-    width: 30px;
-    height: 30px;
-    color: #050404;
+    position: absolute;
+    left: 0;
+    margin-left: 18px;
 }
 
 /* Responsive */
